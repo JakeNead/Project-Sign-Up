@@ -73,6 +73,13 @@ select {
   }
 }
 
+
+
+@font-face {
+    font-family: norse-bold;
+    src: url(Norse-Bold.otf);
+}
+
 body {
     background: url('kira-laktionov-ylaZ1uT0JPY-unsplash.jpg');
     background-size:contain;
@@ -82,7 +89,6 @@ body {
 .page-container {
    width: 100vw;
    display: flex;
-   flex-direction: row;
    align-items: center;
 }
 .side-image {
@@ -100,6 +106,9 @@ body {
 }
 .side-image p {
     color: white;
+    font-family: norse-bold;
+    font-size: 35px;
+    letter-spacing: .15em;
 }
 
 .main {
@@ -111,5 +120,36 @@ body {
     flex-basis: 70%;
 }
 
+.testimonial p {
+    font-size: 1.3em;
+    width: 500px;
+    padding-bottom: 1em;
+}
+input {
+    display: flex;
+}
+form div input {
+    border-radius: 5px;
+}
 
+form {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.top-section,
+.main-card,
+.bottom-section {
+    background-color: rgb(249, 248, 243);
+    padding: 1em;
+}
+
+.main-card {
+background-color: rgb(253, 253, 253);
+
+z-index: 1;
+box-shadow:  0px 3px 5px rgba(0, 0, 0, 0.4);
+}
 
