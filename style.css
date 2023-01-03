@@ -81,8 +81,9 @@ select {
 }
 
 body {
-    background: url('kira-laktionov-ylaZ1uT0JPY-unsplash.jpg');
-    background-size:contain;
+    background-color: rgb(40, 88, 57);
+    background-image: url('kira-laktionov-ylaZ1uT0JPY-unsplash.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position:left;
 }
@@ -127,8 +128,6 @@ body {
 }
 input {
     display: flex;
-}
-form div input {
     border-radius: 5px;
 }
 
@@ -144,12 +143,21 @@ form {
 .bottom-section {
     background-color: rgb(249, 248, 243);
     padding: 1em;
+    
 }
 
 .main-card {
 background-color: rgb(253, 253, 253);
-
 z-index: 1;
 box-shadow:  0px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
+form div input:invalid {
+    box-shadow: 0px 0px 5px red;
+}
+
+input::before {
+        content: '*';
+        height: 10px;
+        width: 10px;
+}
