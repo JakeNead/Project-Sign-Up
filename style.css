@@ -86,6 +86,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position:left;
+        font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .page-container {
    width: 100vw;
@@ -129,7 +130,7 @@ body {
 input {
     display: flex;
     border-radius: 5px;
-}
+   }
 
 form {
     width: 450px;
@@ -143,7 +144,7 @@ form {
 .bottom-section {
     background-color: rgb(249, 248, 243);
     padding: 1em;
-    
+    padding-left: 2em;
 }
 
 .main-card {
@@ -155,9 +156,19 @@ box-shadow:  0px 3px 5px rgba(0, 0, 0, 0.4);
 form div input:invalid {
     box-shadow: 0px 0px 5px red;
 }
+label {
+    position: relative;
+}
+label:valid {
+    border: solid green 2px;
+}
 
-input::before {
-        content: '*';
-        height: 10px;
-        width: 10px;
+label::after {
+    position: absolute;
+    display: block;
+    content: '*';
+    color: red;
+    top: 25px;
+    left: -10px;
+    
 }
