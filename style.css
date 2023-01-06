@@ -81,12 +81,13 @@ select {
 }
 
 body {
-    background-color: rgb(40, 88, 57);
+    background-color: rgb(26, 40, 26);
     background-image: url('kira-laktionov-ylaZ1uT0JPY-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position:left;
         font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    box-sizing: border-box;
 }
 .page-container {
    width: 100vw;
@@ -101,17 +102,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .side-image img {
     height: 90px;
 }
+
 .side-image p {
     color: white;
     font-family: norse-bold;
     font-size: 35px;
     letter-spacing: .15em;
 }
+
+a:link {
+    text-decoration: none;
+}
+
+.photo-credit {
+    position: absolute;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.829);
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.342);
+    border-radius: .3em;
+    padding: .2em;
+    margin: .3em;
+}
+
+.link {
+    color: rgba(255, 255, 255, 0.829);
+ }
 
 .main {
     height: 100vh;
@@ -130,6 +152,7 @@ body {
 input {
     display: flex;
     border-radius: 5px;
+    border: 1px solid grey;
    }
 
 form {
@@ -137,6 +160,10 @@ form {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
+}
+
+h1 {
+    margin-bottom: .5em;
 }
 
 .top-section,
@@ -153,22 +180,38 @@ z-index: 1;
 box-shadow:  0px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
-form div input:invalid {
-    box-shadow: 0px 0px 5px red;
+form div input:focus {
+    box-shadow: 0px 0px 5px black;
 }
-label {
-    position: relative;
-}
+
+
 label:valid {
     border: solid green 2px;
 }
 
-label::after {
+form div input:focus:invalid {
+    outline: none;
+    appearance: none;
+    outline: 1px solid red;
+}
+
+input:required::before {
     position: absolute;
     display: block;
-    content: '*';
-    color: red;
-    top: 25px;
-    left: -10px;
-    
+    content: 'sdfadsg';
+    font-size: 30px;
+    background-color: blue;
+}
+
+input:required:valid {
+    background-color: rgb(178, 225, 178);
+}
+
+input:valid {
+    background-color: rgb(178, 225, 178);
+    border: solid green 2px;
+}
+
+input:optional:valid {
+    border: solid green 2px;
 }
