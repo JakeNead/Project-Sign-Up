@@ -201,11 +201,6 @@ input:required:valid {
     border: solid green 1px;
 }
 
-input:optional:valid {
-    background-color: rgba(144, 187, 144, 0.481);
-    border: solid green 1px;
-}
-
 .form-group {
     position: relative;
 }
@@ -214,17 +209,15 @@ input:required:invalid + .error-icon::before {
     position: absolute;
     bottom: 1px;
     right: 25px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     width: 1em;
     color: red;
-    /* background: black ; */
     border-radius: 50%;
 }
 
 .form-group #error-message {
-    position: relative;
+    position: absolute;
+    top: 57px;
+    left: 0px;
    }
 
 #error-message {
