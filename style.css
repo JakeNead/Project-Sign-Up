@@ -179,6 +179,16 @@ background-color: rgb(253, 253, 253);
 z-index: 1;
 box-shadow:  0px 3px 5px rgba(0, 0, 0, 0.4);
 padding-bottom: 2em;
+
+}
+
+label {
+    font-size: .9em;
+    letter-spacing: 1.4px;
+}
+
+input {
+    font-size: 1.1em;
 }
 
 label:focus {
@@ -197,17 +207,6 @@ label:valid {
 
 label:active {
     border: black 2px solid;
-}
-
-
-input:required::before {
-    position: absolute;
-    display: block;
-    content: 'X';
-    width: 20px;
-    height: 20px;
-    font-size: 30px;
-    background-color: blue;
 }
 
 input:required:valid {
