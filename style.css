@@ -94,7 +94,8 @@ body {
    display: flex;
    align-items: center;
 }
-.side-image {
+
+.side-hero {
     background-color: rgba(0, 0, 0, 0.6);
     height: 100px;
     width: 32vw;
@@ -105,19 +106,20 @@ body {
     position: relative;
 }
 
-.side-image img {
+img[alt="Odin Project Logo"] {
     height: 90px;
 }
 
-.side-image p {
+.side-hero p {
     color: white;
     font-family: norse-bold;
     font-size: 35px;
     letter-spacing: .15em;
 }
 
-a:link {
+.photo-credit a {
     text-decoration: none;
+    color: rgba(255, 255, 255, 0.829);
 }
 
 .photo-credit {
@@ -130,10 +132,6 @@ a:link {
     padding: .2em;
     margin: .3em;
 }
-
-.link {
-    color: rgba(255, 255, 255, 0.829);
- }
 
 .main {
     height: 100vh;
@@ -149,22 +147,12 @@ a:link {
     width: 500px;
     padding-bottom: 1em;
 }
+
 input {
     display: flex;
     border-radius: 5px;
     border: 1px solid grey;
    }
-
-form {
-    width: 450px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-}
-
-h1 {
-    margin-bottom: .5em;
-}
 
 .top-section,
 .main-card,
@@ -172,6 +160,17 @@ h1 {
     background-color: rgb(249, 248, 243);
     padding: 1em;
     padding-left: 2em;
+}
+
+h1 {
+    margin-bottom: .5em;
+}
+
+form {
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
 .main-card {
@@ -203,10 +202,6 @@ form div input:focus {
 
 label:valid {
     border: solid green 2px;
-}
-
-label:active {
-    border: black 2px solid;
 }
 
 input:required:valid {
